@@ -1,0 +1,30 @@
+{
+  "name": "moodle-course-syncer",
+  "version": "0.2.5",
+  "main": "",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "preview": "node ./src/scripts/viewContent.js",
+    "service": "node ./src/scripts/viewContent.js && node ./src/scripts/moodleCourseService.js",
+    "start:pm2": "pm2 start ./src/server.js --no-autorestart",
+    "service:pm2": "pm2 start start-service.sh --no-autorestart",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,vue,css,scss,md,html}\""
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "aritlh",
+  "license": "MIT",
+  "description": "A web scraping tool for e-learning platforms",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "https": "^1.0.0",
+    "node-fetch": "^2.7.0",
+    "node-html-parser": "^6.1.13",
+    "pm2": "^5.4.2",
+    "prettier": "^3.3.3",
+    "tough-cookie": "^4.1.4"
+  }
+}
