@@ -137,4 +137,4 @@ git push origin your-feature-branch
 **Create a Pull Request**: Go to your forked repository on GitHub and create a pull request from your branch (`your-feature-branch`) to the `master` branch of the original repository.
 
 ## License
-[MIT]()
+[MIT](LICENSE)
