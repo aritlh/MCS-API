@@ -2,6 +2,7 @@ import config from '../config.js';
 import express from 'express';
 import axios from 'axios';
 import https from 'https';
+import cors from 'cors';
 import path from 'path';
 import fs from 'fs';
 
@@ -83,6 +84,15 @@ const fetchData = async () => {
     console.error('Error:', error);
   }
 };
+
+app.use(
+  cors({
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  }),
+);
 
 // Define a route to handle GET requests for courses
 app.get('/courses', async (req, res) => {
